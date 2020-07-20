@@ -30,6 +30,6 @@ public class ProducerService {
             }
         };
         amqpTemplate.convertAndSend(RabbitmqConfig.DELAY_EXCHANGE_NAME, RabbitmqConfig.DELAY_QUEUE_ROUTING_KEY, orderId, messagePostProcessor);
-        log.info("[produceByMessageTTL]order id:{}, delay {}s send success", orderId, expiredTime);
+        log.info("[produceByMessageTTL]order id:{}, delay {}s send success", orderId, expiredTime / 1000);
     }
 }
