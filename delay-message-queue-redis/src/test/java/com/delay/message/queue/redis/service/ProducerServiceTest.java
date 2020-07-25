@@ -22,7 +22,7 @@ public class ProducerServiceTest {
         Random random = new Random(1);
         for (int i = 0; i < 10; i++) {
             Calendar calendar = Calendar.getInstance();
-            // 3秒后执行
+            // 产生一个随机数
             int time = random.nextInt(100);
             calendar.add(Calendar.SECOND, time);
             String orderId = "order-id-" + i;
